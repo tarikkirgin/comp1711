@@ -1,0 +1,5 @@
+#!/bin/bash
+start=$1
+end=$2
+file=$3
+sed -n "${start},${end}p" "$file"
