@@ -10,14 +10,15 @@ int main(){
     {
         if(name[i] == '\0'){
             length = i;
+            break;
         }
     }
-    printf("length: %d\n", length);
     char reversed_name[length];
-    for (int i = 0; i < length-1; i++)
+    for (int i = 0; i < length; i++)
     {
-        reversed_name[i] = name[length-2-i];
+        reversed_name[i] = name[length-1-i];
     }
+    reversed_name[length] = '\0';
     printf("Starting word: %s\n", name);
     printf("Reversed word: %s\n", reversed_name);
     return 0;
