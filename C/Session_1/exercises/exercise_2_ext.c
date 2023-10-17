@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// reverse a string (knowing the length)
+// reverse a string (unknowing the length)
 int main(){
     char name[100];
     int length;
