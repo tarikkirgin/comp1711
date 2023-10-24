@@ -24,13 +24,10 @@ int main()
 
 void reverseArray(int *array, int length)
 {
-    int reversed_array[length];
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < length/2; i++)
     {
-        reversed_array[i] = array[length-i-1];
-    }
-    for (int i = 0; i < length; i++)
-    {
-        array[i] = reversed_array[i];
+        int temp = array[i];
+        array[i] = array[length-i-1];
+        array[length-i-1] = temp;
     }
 }
