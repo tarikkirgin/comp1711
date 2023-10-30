@@ -9,7 +9,12 @@ int main()
         perror("File i/o");
         return 1;
     }    
-    fprintf(file, "Hello file :)\n");
+    int max_number = 10;
+    for (int i = 0; i <= max_number; i++)
+    {
+        fprintf(file, "%d\n", i * i);
+    }
+
     fclose(file);
     return 0;
 }

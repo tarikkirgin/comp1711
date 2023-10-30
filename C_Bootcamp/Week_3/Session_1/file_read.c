@@ -9,8 +9,14 @@ int main()
         perror("File i/o");
         return 1;
     }    
-    fprintf(file, "Hello file :)\n");
-    perror("");
+
+    int buffer_size = 2;
+    char buffer[buffer_size];
+    while(fgets(buffer, buffer_size, file))
+    {
+        printf("%s", buffer);   
+    }
+    
     fclose(file);
     return 0;
 }
