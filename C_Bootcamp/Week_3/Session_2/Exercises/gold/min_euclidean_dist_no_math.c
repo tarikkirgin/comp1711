@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <math.h>
 #include "point.h"
 
 float euclidean_distance(point point_one, point point_two)
 {
-    return sqrt(pow((point_one.x - point_two.x), 2) + pow((point_one.y - point_two.y), 2));
+    float x_diff = point_one.x - point_two.x;
+    float y_diff = point_one.y - point_two.y;
+    float diff_sums = (x_diff * x_diff) + (y_diff * y_diff);
 }
 
 int main() 
@@ -15,6 +16,8 @@ int main()
 
     int n = 5;
     point points[n+1];
+
+    printf("test:++++=> %f\n\n\n", euclidean_distance((point){5, -6}, (point){32, -4}));
 
     // populate array with random floats
     for (int i = 0; i < n + 1; i++)
