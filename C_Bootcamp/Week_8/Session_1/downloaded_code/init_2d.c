@@ -9,9 +9,19 @@ void printArray(int a[][3] ){
      }
 }
 
+void changeColumn(int array[][3], int column, int new_value)
+{
+  for (size_t i = 0; i < 3; i++)
+  {
+    array[i][column] = new_value;
+  }
+}
+
 int main() {
   int array1[2][3] = {{1, 2, 3}, {4, 5, 6,}};
   printf("Values in array1 by row are:\n");
+  printArray(array1);
+  changeColumn(array1, 0, 9);
   printArray(array1);
 
   int array2[2][3] = {1, 2, 3, 4, 5};
