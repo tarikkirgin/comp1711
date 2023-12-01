@@ -15,6 +15,7 @@
         "algorithm": "c",
         "array": "c",
         "string_view": "c",
-        "random": "c"
+        "random": "c",
+        "limits": "c"
     }
 }
